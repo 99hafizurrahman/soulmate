@@ -14,9 +14,9 @@ var title = document.querySelector(".match");
 if (rank[0] === rank[1]) {
   title.innerHTML = "You Choose Yourself! 😎";
 } else if (rank[0] > 10 && rank[1] > 10) {
-  title.innerHTML = "It's a Lesbo match! 👩‍❤️‍💋‍👩";
+  title.innerHTML = "It's a Bestie match! 👩‍❤️‍💋‍👩";
 } else if (rank[0] < 11 && rank[1] < 11) {
-  title.innerHTML = "Its a Gay match! 👨‍❤️‍👨";
+  title.innerHTML = "Its a Friend match! 👨‍❤️‍👨";
 } else {
   title.innerHTML = "Congrats..🎉 Its a gf/bf match! 👫";
 }
