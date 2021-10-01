@@ -1,25 +1,26 @@
-var i;
-var rank = [];
+let i;
+let rank = [];
 for (i = 0; i < 2; i++) {
-  var randomNumber1 = Math.floor(Math.random() * 22);
+  let randomNumber1 = Math.floor(Math.random() * 21);
   rank.push(randomNumber1);
-  var male = document.querySelectorAll("img");
-  var imageSourse = "images/boy (" + randomNumber1 + ").jpg";
-  male[i].setAttribute("src", imageSourse);
+  let setImgSource = document.querySelectorAll('img');
+  let imageSourse = 'images/boy (' + randomNumber1 + ').jpg';
+  setImgSource[i].setAttribute('src', imageSourse);
 }
 
-var btn = document.querySelector("button");
+let button = document.querySelector('button');
 
-var title = document.querySelector(".match");
+let result = document.querySelector('.match');
+
 if (rank[0] === rank[1]) {
-  title.innerHTML = "You Choose Yourself! 😎";
+  result.innerHTML = 'You Choose Yourself! 😎';
 } else if (rank[0] > 10 && rank[1] > 10) {
-  title.innerHTML = "It's a Bestie match! 👩‍❤️‍💋‍👩";
+  result.innerHTML = "It's a Bestie match! 👩‍❤️‍💋‍👩";
 } else if (rank[0] < 11 && rank[1] < 11) {
-  title.innerHTML = "Its a Friend match! 👨‍❤️‍👨";
+  result.innerHTML = 'I got friend! 👨‍❤️‍👨';
 } else {
-  title.innerHTML = "Congrats..🎉 Its a gf/bf match! 👫";
+  result.innerHTML = 'Congrats..🎉 you got match! 👫';
 }
-btn.addEventListener("click", function (e) {
+button.addEventListener('click', function (e) {
   location.reload();
 });
